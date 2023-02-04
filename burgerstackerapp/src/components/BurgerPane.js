@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import BurgerStack from "./BurgerStack";
 import IngredientList from "./IngredientList";
 
 class BurgerPane extends Component {
@@ -13,8 +14,8 @@ class BurgerPane extends Component {
             <IngredientList />
 
             </div>
-            <div className="burgerPane"> Burger Stack
-            </div>
+            <BurgerStack />
+
 
             </>
         )

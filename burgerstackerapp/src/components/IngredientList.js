@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import BurgerStack from "./BurgerStack";
 
 //// overall ingredients to grab LEFT
 
@@ -20,28 +21,38 @@ class IngredientList extends Component {
             {name: 'Onion', color: 'lightyellow'}
           ]
           
+          const emptystack = []
+          const buildBurger = (e) => {
+            console.log('add this to empty', e.target.innerHTML)
+            emptystack.push(e.target.innerHTML)
+            console.log(emptystack)
+            return emptystack
+          }
+
           const allIngredients = ingredients.map((ingred, idx) => {
               const boxStyle = {'background-color' : `${ingred.color}`}
             return (
-                <div className="ingredients" style={boxStyle} key={`${ingred.name} `}>  {ingred.name} </div>
+                <div 
+                className="ingredients" 
+                onClick={buildBurger}
+                style={boxStyle} 
+                key={`${ingred.name}`}
+                >  
+                {ingred.name} 
+                </div>
         )})
-
-
-        // const allIngredients = ingredients.map((ingred, idx) => {
-        // return (
-        // <ul key={`${ingred.name} ${ingred.color}`}>
-        //     {ingred.name} {ingred.color}</ul>
-        //     )})
-
 
         return (
             <div>
+                
             {allIngredients}
+            
             </div>
+
         )
     }
 }
 
 
 
-export default IngredientList
+export default IngredientList;

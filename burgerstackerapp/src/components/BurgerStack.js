@@ -1,10 +1,14 @@
 import React, {Component} from "react";
 
-class Something extends Component {
+class BurgerStack extends Component {
+
+    
     render () { 
+
         return (
-            <div>
-                
+            <div className="burgerPane"> Burger Stack
+            
+            <div className="stackArea">Burger stacking area</div>
             </div>
         )
     }
@@ -12,4 +16,4 @@ class Something extends Component {
 
 
 
-export default Something
+export default BurgerStack
