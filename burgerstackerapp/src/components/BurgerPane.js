@@ -8,12 +8,12 @@ class BurgerPane extends Component {
 
         return (
             <>
-            <div className="burgerPanes"> Ingredients
+            <div className="ingredientPane"> Ingredients
 
             <IngredientList />
 
             </div>
-            <div className="burgerPanes"> Burger Stack
+            <div className="burgerPane"> Burger Stack
             </div>
 
             </>

@@ -19,10 +19,11 @@ class IngredientList extends Component {
             {name: 'Bacon', color: 'maroon'},
             {name: 'Onion', color: 'lightyellow'}
           ]
-        
+          
           const allIngredients = ingredients.map((ingred, idx) => {
+              const boxStyle = {'background-color' : `${ingred.color}`}
             return (
-                <li key={`${ingred.name} `}>  {ingred.name} </li>
+                <div className="ingredients" style={boxStyle} key={`${ingred.name} `}>  {ingred.name} </div>
         )})
 
 

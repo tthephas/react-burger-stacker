@@ -36,8 +36,7 @@
     transform: rotate(360deg);
   }
 }
-
-.burgerPanes {
+.ingredientPane {
   background-color: white;
   width: 35vw;
   height: 65vh;
@@ -45,11 +44,32 @@
   margin: 100px 50px;
   padding: 10px;
   display: inline-block;
-
+  cursor: pointer;  
+  font-weight: bolder;
 }
+
+.burgerPane {
+  background-color: white;
+  width: 35vw;
+  height: 65vh;
+  border: solid 1pt black;
+  margin: 100px 50px;
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  
+}
+
+
 .container {
   background-color: lightgrey;
   position: relative;
   height: 100vh;
   width: 100vw;
+}
+
+.ingredients {
+  border: 1pt solid black;
+  margin: 3px;
+  margin-top: 10px;
 }
