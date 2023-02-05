@@ -26,11 +26,11 @@ class IngredientList extends Component {
             console.log('add this to empty', e.target.innerHTML)
             emptystack.push(e.target.innerHTML)
             console.log(emptystack)
-            return emptystack
+            return emptystack.map((ingred) => <li>{ingred}</li>)
           }
 
           const allIngredients = ingredients.map((ingred, idx) => {
-              const boxStyle = {'background-color' : `${ingred.color}`}
+              const boxStyle = {'backgroundColor' : `${ingred.color}`}
             return (
                 <div 
                 className="ingredients" 
