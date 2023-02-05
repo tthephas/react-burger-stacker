@@ -23,23 +23,35 @@ class IngredientList extends Component {
           
           const emptystack = []
           const buildBurger = (e) => {
-            console.log('add this to empty', e.target.innerHTML)
-            emptystack.push(e.target.innerHTML)
-            console.log(emptystack)
-            return emptystack.map((ingred) => <li>{ingred}</li>)
+            alert('you clicked me')
+            //console.log('add this to empty', e.target.innerHTML)
+            // emptystack.push(e.target.innerHTML)
+            // console.log(emptystack)
+            // return emptystack.map((ingred) => <li>{ingred}</li>)
           }
 
           const allIngredients = ingredients.map((ingred, idx) => {
               const boxStyle = {'backgroundColor' : `${ingred.color}`}
             return (
-                <div 
-                className="ingredients" 
-                onClick={buildBurger}
-                style={boxStyle} 
-                key={`${ingred.name}`}
-                >  
-                {ingred.name} 
-                </div>
+                // <div 
+                // className="ingredients" 
+                // onClick={buildBurger}
+                // style={boxStyle} 
+                // key={`${ingred.name}`}
+                // >  
+                // {ingred.name} 
+                // </div>
+                <form onSubmit={buildBurger} key={`${ingred.name}`}>
+
+                    <button
+                        type="submit"
+                        className="ingredients"
+                        style={boxStyle}
+                        
+
+                        >{`${ingred.name}`}
+                    </button>
+                </form>
         )})
 
         return (
